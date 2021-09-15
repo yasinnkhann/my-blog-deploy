@@ -9,7 +9,7 @@ export default function Post() {
     let { postId } = useParams();
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/api/getFromId/${postId}`)
+        axios.get(`https://mysql-first-deploy.herokuapp.com/api/getFromId/${postId}`)
         .then(res => {
             setPost({
                 title: res.data[0].title,

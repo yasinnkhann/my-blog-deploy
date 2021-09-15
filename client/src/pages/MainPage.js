@@ -9,7 +9,7 @@ export default function MainPage() {
     let history = useHistory();
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/api/get`)
+        axios.get(`https://mysql-first-deploy.herokuapp.com/api/get`)
         .then(res => {
             setPostList(res.data);
             console.log(res.data);
@@ -21,7 +21,7 @@ export default function MainPage() {
 
     const likePost = (e, id) => {
         e.stopPropagation()
-        axios.post(`http://localhost:3001/api/like/${id}`)
+        axios.post(`https://mysql-first-deploy.herokuapp.com/api/like/${id}`)
         .then(() => {
             window.location = '/';
         })

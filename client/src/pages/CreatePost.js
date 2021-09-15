@@ -9,7 +9,7 @@ export default function CreatePost() {
     const [text, setText] = useState('');
 
     const submitPost = () => {
-        axios.post(`http://localhost:3001/api/create`, {
+        axios.post(`https://mysql-first-deploy.herokuapp.com/api/create`, {
             userName: userName,
             title: title,
             text: text,
